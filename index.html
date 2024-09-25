@@ -42,14 +42,46 @@
 
   <header id="header" class="header d-flex align-items-center position-relative">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
+      <style>
+        a svg path.first{
+          fill: red;
+        }
+      </style>
+      <a href="index.html" class="logo d-flex align-items-center col-1">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" class="me-0" alt="AgriCulture">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 144.25 58.79" style="enable-background:new 0 0 144.25 58.79;" xml:space="preserve">
+     <style type="text/css">
+       .st0{fill:#222222;}
+       .st1{fill:#1BB24B;}
+     </style>
+     <g>
+       <path class="st0" d="M0,25.76h2.42l2.12,5.76c2.48,6.67,6.36,11.21,11.21,11.21s7.88-3.03,7.88-7.27c0-10.91-22.12-10-22.12-24.24
+         C1.52,5.45,6.67,0.3,15.46,0.3c6.97,0,10.3,3.03,10.3,3.03S27.27,2.12,27.58,0h1.52v14.24h-2.12l-1.52-3.64
+         c-2.42-5.76-4.55-8.49-9.39-8.49c-3.94,0-6.36,2.42-6.36,5.76c0,10.3,23.03,9.39,23.03,23.94c0,6.97-5.76,12.73-16.67,12.73
+         C6.67,44.55,0,38.18,0,38.18V25.76z"/>
+       <path class="st0" d="M33.64,16.97l11.21-1.21l0.61,0.61v19.39c0,3.64,1.21,4.85,3.33,4.85c2.42,0,5.76-2.42,5.76-2.42V20.3
+         c-2.12-1.52-4.24-2.12-4.24-2.12v-1.21l11.21-1.21l0.61,0.61V39.7c2.42,1.52,4.24,1.82,4.24,1.82v1.21l-11.21,1.52l-0.61-0.61V40.3
+         h-0.3c0,0-4.55,3.94-9.7,3.94c-4.24,0-6.67-2.42-6.67-8.49V20.3c-2.12-1.52-4.24-2.12-4.24-2.12V16.97z"/>
+       <path class="st0" d="M66.36,57.58c0,0,2.42-0.61,4.24-2.12V20.3c-2.12-1.52-4.24-2.12-4.24-2.12v-1.21l11.21-1.21l0.61,0.61v3.03
+         h0.3c0,0,3.03-3.64,7.58-3.64c6.06,0,11.52,5.46,11.52,13.33c0,9.09-6.06,15.15-13.64,15.15c-3.03,0-5.76-1.82-5.76-1.82v13.03
+         c1.82,1.52,4.24,2.12,4.24,2.12v1.21H66.36V57.58z M83.34,42.73c2.73,0,6.06-3.33,6.06-12.42c0-8.79-3.03-11.82-5.76-11.82
+         c-3.03,0-5.45,3.64-5.45,3.64v15.46C78.18,37.58,80,42.73,83.34,42.73z"/>
+       <path class="st0" d="M99.4,42.43c0,0,2.42-0.61,4.24-2.12v-20c-2.12-1.52-4.24-2.12-4.24-2.12v-1.21l11.21-1.21l0.61,0.61V40.3
+         c1.82,1.52,4.24,2.12,4.24,2.12v1.21H99.4V42.43z"/>
+       <path class="st1" d="M107.58,2.12c2.73,0,4.55,1.82,4.55,4.55c0,2.73-1.82,4.55-4.55,4.55s-4.55-1.82-4.55-4.55
+         C103.03,3.94,104.85,2.12,107.58,2.12z"/>
+       <path class="st0" d="M129.4,27.27l3.03-0.91v-2.42c0-4.85-1.82-6.67-3.94-6.67c-2.73,0-4.24,2.06-5.45,5.15l-1.21,3.03h-2.73v-6.67
+         c0,0,4.55-3.03,10.3-3.03c6.67,0,10.61,3.94,10.61,10.3V39.7c2.12,1.21,4.24,1.82,4.24,1.82v1.21l-11.21,1.52l-0.61-0.61v-3.03
+         h-0.3c0,0-2.73,3.64-7.88,3.64c-4.55,0-7.58-3.03-7.58-6.67C116.67,33.33,119.4,30.3,129.4,27.27z M128.49,40.3
+         c1.94,0,4.06-1.88,3.94-1.82v-10.3l-2.12,0.91c-2.12,0.91-5.45,3.33-5.45,6.67C124.85,38.79,126.37,40.3,128.49,40.3z"/>
+     </g>
+     </svg>
+     
         <!-- <h1 class="sitename">AgriCulture</h1>  -->
       </a>
 
-      <nav id="navmenu" class="navmenu flex-grow-1 bg-light">
+      <nav id="navmenu" class="navmenu">
         <ul class="justify-content-between">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Us</a></li>
@@ -59,7 +91,8 @@
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Deep Dropdown 1</a></li>
                   <li><a href="#">Deep Dropdown 2</a></li>
@@ -89,7 +122,7 @@
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
         <div class="carousel-item active">
-          <img src="assets/img/hero_1.jpg" alt="">
+          <img src="assets/img/main_visual01.jpg" alt="furniture">
           <div class="carousel-container">
             <h2>Farming is the best solution of worlds starvation</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -630,60 +663,61 @@
           <div class="row">
             <div class="col-md-12 mb-4 mb-md-4">
               <div class="testimonial d-md-flex align-items-center">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="w-auto h-auto img-fluid rounded-0" alt="Testimonial author">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="w-auto h-auto img-fluid rounded-0"
+                  alt="Testimonial author">
                 <div class="ms-4">
-                    <blockquote>
-                      <p>
-                        “Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Provident deleniti iusto molestias, dolore vel fugiat
-                        ab placeat ea?”
-                      </p>
-                    </blockquote>
-                    <p class="client-name">James Smith</p>
+                  <blockquote>
+                    <p>
+                      “Lorem ipsum dolor sit, amet consectetur adipisicing
+                      elit. Provident deleniti iusto molestias, dolore vel fugiat
+                      ab placeat ea?”
+                    </p>
+                  </blockquote>
+                  <p class="client-name">James Smith</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-4">
+              <div class="testimonial">
+                <img src="assets/img/testimonials/testimonials-2.jpg" alt="Testimonial author">
+                <blockquote>
+                  <p>
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
+                  </p>
+                </blockquote>
+                <p class="client-name">Kate Smith</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-4">
+              <div class="testimonial">
+                <img src="assets/img/testimonials/testimonials-3.jpg" alt="Testimonial author">
+                <blockquote>
+                  <p>
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
+                  </p>
+                </blockquote>
+                <p class="client-name">Claire Anderson</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-4">
+              <div class="testimonial">
+                <img src="assets/img/testimonials/testimonials-4.jpg" alt="Testimonial author">
+                <blockquote>
+                  <p>
+                    “Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Provident deleniti iusto molestias, dolore vel fugiat
+                    ab placeat ea?”
+                  </p>
+                </blockquote>
+                <p class="client-name">Dan Smith</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4 mb-md-4">
-            <div class="testimonial">
-              <img src="assets/img/testimonials/testimonials-2.jpg" alt="Testimonial author">
-              <blockquote>
-                <p>
-                  “Lorem ipsum dolor sit, amet consectetur adipisicing
-                  elit. Provident deleniti iusto molestias, dolore vel fugiat
-                  ab placeat ea?”
-                </p>
-              </blockquote>
-              <p class="client-name">Kate Smith</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4 mb-md-4">
-            <div class="testimonial">
-              <img src="assets/img/testimonials/testimonials-3.jpg" alt="Testimonial author">
-              <blockquote>
-                <p>
-                  “Lorem ipsum dolor sit, amet consectetur adipisicing
-                  elit. Provident deleniti iusto molestias, dolore vel fugiat
-                  ab placeat ea?”
-                </p>
-              </blockquote>
-              <p class="client-name">Claire Anderson</p>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4 mb-md-4">
-            <div class="testimonial">
-              <img src="assets/img/testimonials/testimonials-4.jpg" alt="Testimonial author">
-              <blockquote>
-                <p>
-                  “Lorem ipsum dolor sit, amet consectetur adipisicing
-                  elit. Provident deleniti iusto molestias, dolore vel fugiat
-                  ab placeat ea?”
-                </p>
-              </blockquote>
-              <p class="client-name">Dan Smith</p>
-            </div>
-          </div>
         </div>
-      </div>
       </div>
     </section><!-- /Testimonials Section -->
 
