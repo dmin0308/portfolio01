@@ -250,11 +250,27 @@ h6 {
   box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
+.logo .st0 {
+  transition: fill 0.5s ease;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
+
+  #header.bg-transparent .navmenu ul li a
+  {
+    color:var(--background-color);
+  }
+
+  #header.bg-transparent .navmenu ul li a:focus,
+  #header.bg-transparent .navmenu ul li a:hover
+  {
+    color:var(--nav-hover-color);
+  }
+
   .navmenu {
     padding: 0;
   }
@@ -794,7 +810,7 @@ section,
 
 .hero .carousel {
   width: 100%;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
@@ -822,7 +838,7 @@ section,
 
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  background: color-mix(in srgb, var(--background-color), transparent 90%);
   position: absolute;
   inset: 0;
   z-index: 2;

@@ -21,11 +21,6 @@ const navidata = [
     __target : ""
   },
   {
-    d1text : "Our Services",
-    d1href : "services.html",
-    __target : ""
-  },
-  {
     d1text : "Contact us",
     d1href : "services.html",
     __target : ""
