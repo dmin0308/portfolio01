@@ -17,10 +17,49 @@
       width: 100%;
       height: 400px;
     }
+    .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* 처음에는 숨김 */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 글래스모피즘 최소화 */
+.glass-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+    
   </style>
 </head>
 <body>
-
+  <button id="toggleFormBtn" class="btn btn-light">Show Login Form</button>
+  <div class="overlay" id="overlay">
+    <div class="glass-form bg-light text-dark p-4">
+      <h3 class="text-center mb-3">Login</h3>
+      <form>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+        <button type="button" id="closeFormBtn" class="btn btn-danger w-100 mt-2">Close</button>
+      </form>
+    </div>
+  </div>
   <div class="container">
     <h1 class="text-center mt-5">My Kakao Map</h1>
     <div id="map" class="my-3"></div> <!-- 카카오 지도를 표시할 요소 -->
@@ -66,6 +105,10 @@
     document.getElementById('location2Btn').addEventListener('click', function() {
       setMarker(37.4979, 127.0276); // 강남역 좌표
     });
+
+    document.getElementById('toggleFormBtn').onclick = () => document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('closeFormBtn').onclick = () => document.getElementById('overlay').style.display = 'none';
+
   </script>
 </body>
 </html>

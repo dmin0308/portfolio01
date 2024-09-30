@@ -41,4 +41,6 @@ window.addEventListener("load", function () {
     // requestAnimationFrame을 사용하여 성능 최적화
     requestAnimationFrame(handleScroll);
   });
+  document.getElementById('toggleFormBtn').onclick = () => document.getElementById('overlay').style.display = 'flex';
+  document.getElementById('closeFormBtn').onclick = () => document.getElementById('overlay').style.display = 'none';
 });
