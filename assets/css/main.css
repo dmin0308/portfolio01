@@ -30,7 +30,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #1BB24B; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #1BB24B !important; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -48,7 +48,7 @@
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #2ea359;
+  --accent-color: #1BB24B;
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
@@ -103,7 +103,7 @@ h6 {
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: #1BB24B;
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -224,7 +224,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color), transparent 35% ;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -379,7 +379,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: var(--background-color);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -682,7 +682,7 @@ h6 {
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 20px;
   transition: all 0.4s;
 }
 
@@ -871,9 +871,10 @@ section,
   overflow: hidden;
 }
 
+
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 90%);
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1096,7 +1097,7 @@ section,
 .about .content {
   background: var(--accent-color);
   color: var(--contrast-color);
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 
 .about .content .img-overlap {

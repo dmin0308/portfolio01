@@ -10,8 +10,8 @@
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link rel="icon" href="assets/img/favicon.ico" type="image/svg+xml">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/assets/img/favicon.svg" rel="shortcut icon" >
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -26,7 +26,6 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <script src="https://player.vimeo.com/api/player.js"></script>
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="ndm/ndm.css" rel="stylesheet">
@@ -35,7 +34,7 @@
   * Template URL: https://bootstrapmade.com/agriculture-bootstrap-website-template/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+  * License: https://bootstrapmade.com/license/+
   ======================================================== -->
 </head>
 
@@ -115,31 +114,59 @@
   </header>
 
   <main class="main">
+
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
+    
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-      
+    
         <div class="carousel-item active">
           <div class="cover_hero">
             <div class="video_hero" style="position: relative; overflow: hidden; height: 100vh; object-fit: cover;">
               <iframe
-                src="https://player.vimeo.com/video/1019716740?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1"
+                src="https://player.vimeo.com/video/1020036288?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&speed=0.6"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+                style="position: absolute; top: -240%; left: 0; width: 100vw; height: 600%; z-index: 1;"
                 title="67719_Man using sanding machine on wood in shop_By_Snir_Merom_Artlist_HD" allowfullscreen>
               </iframe>
-              <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 1); z-index: 2;"></div>
+            </div> <!--// video_hero-->
+          </div>
+          <div class="carousel-container d-flex justify-content-evenly flex-xl-row " style="z-index: 5;">
+            <div class="col-lg-6">
+              <h2 class="d-flex justify-content-start">"One of a kind stories, reborn by Supia."</h2>
+              <p>"하나뿐인 이야기, 수피아에서 다시 피어나다"</p>
             </div>
-          </div>
-          <div class="carousel-container" style="z-index: 3;">
-            <h2>"One of a kind stories, reborn by Supia."</h2>
-            <p>"하나뿐인 이야기, 수피아에서 다시 피어나다"</p>
-          </div>
-        </div><!-- End Carousel Item -->
-      </div>
+            <div class="form-container position-relative col-lg-3">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">성함</label>
+                  <input type="text" class="form-control" id="name" placeholder="성함을 입력하세요">
+                </div>
+                <div class="mb-3">
+                  <label for="Phone" class="form-label">전화번호</label>
+                  <input type="tel" class="form-control" id="Phone" placeholder="전화번호를 입력하세요">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">이메일</label>
+                  <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">상담내용</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="간략한 상담내용을 입력하세요"></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">상담하기</button>
+                </div>
+              </form>
+            </div><!--// form-container-->
+            <div class="line"></div>
+            <div class="scroll-down">Scroll Down <span class="arrow bounce">↓</span></div>
+          </div><!--// carousel-container-->
 
-    </section><!-- /Hero Section -->
+        </div><!--//Carousel Item -->
+      </div><!--//hero-carousel -->
+    
+    </section><!--//Hero Section -->
     <section>
       <div class="text-center pt-3">
         <h1>Welcome!</h1>
@@ -147,29 +174,99 @@
         <button id="toggleFormBtn" class="btn btn-light">상담요청</button>
       </div>
 
-      <!-- 오버레이 및 글래스모피즘 폼 -->
-      <div class="overlay" id="overlay">
-        <div class="glass-form text-white p-6">
-          <h3 class="text-center mb-3 text-white fs-1">상담 요청</h3>
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="성함" required>
-            </div>
-            <div class="mb-3">
-              <input type="tel" class="form-control" placeholder="전화번호" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="3" placeholder="상담 내용" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">제출하기</button>
-            <button type="button" id="closeFormBtn" class="btn btn-danger w-100 mt-2">닫기</button>
-          </form>
-        </div>
-      </div>
     </section><!-- /Call To Action Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+          <div class="content">
+            <div class="container">
+              <div class="row d-flex justify-content-between">
+                
+                <!-- About 텍스트 섹션 -->
+                <div class="about_T col-lg-5" data-aos="fade-up" data-aos-delay="100">
+                  <h3 class="content-subtitle text-white opacity-60 mb-6">About Us</h3>
+                  <h2 class="content-title mb-6">
+                    <strong>수피아는 자연의 순수함과 시간의 가치를 상징하는 업사이클링 인테리어 브랜드입니다.</strong>
+                  </h2>
+                  <p class="opacity-70">
+                    "당신의 소중한 기억을 다시 살리고, 세상에 단 하나뿐인 가구와 시간의 이야기를 이어갑니다. 수피아와 함께 지속 가능한 가치를 만들어가세요."
+                  </p>
+                </div>
+                
+                <!-- About 아이콘 섹션 -->
+                <div class="about_I col-lg-5">
+                  <div class="col-lg-12 d-flex align-items-start mb-4">
+                    <i class="bi bi-truck me-4 display-6"></i>
+                    <div>
+                      <h4 class="m-0 h5 text-white">오래된 가구 수거</h4>
+                      <p class="text-white opacity-70">요청한 가구를 집 앞까지 찾아가 수거해드립니다</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 d-flex align-items-start mb-4">
+                    <i class="bi bi-recycle me-4 display-6"></i>
+                    <div>
+                      <h4 class="m-0 h5 text-white">업사이클링</h4>
+                      <p class="text-white opacity-70">소중한 시간이 담긴 가구가 업사이클링 과정을 거칩니다</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-12 d-flex align-items-start">
+                    <i class="bi bi-shop me-4 display-6"></i>
+                    <div>
+                      <h4 class="m-0 h5 text-white">Sell Veggies</h4>
+                      <p class="text-white opacity-70">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+        
+              <!-- Award 로고 섹션 (추가해야함)-->
+              <div class="award row mt-5">
+                <div class="col-4 text-center">
+                  <img src="assets/img/logos/logo1.svg" alt="Logo 1" class="img-fluid">
+                </div>
+                <div class="col-4 text-center">
+                  <img src="assets/img/logos/logo2.svg" alt="Logo 2" class="img-fluid">
+                </div>
+                <div class="col-4 text-center">
+                  <img src="assets/img/logos/logo3.svg" alt="Logo 3" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section><!-- /About Section -->
+    
+        <!-- About 3 Section -->
+        <section id="about-3" class="about-3 section">
+    
+          <div class="container">
+            <div class="row gy-4 justify-content-between align-items-center">
+              <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
+                <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
+                  <span class="play"><i class="bi bi-play-fill"></i></span>
+                </a>
+              </div>
+              <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="content-title mb-4">Plants Make Life Better</h2>
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  necessitatibus placeat, atque qui voluptatem velit explicabo vitae
+                  repellendus architecto provident nisi ullam minus asperiores commodi!
+                  Tenetur, repellat aliquam nihil illo.
+                </p>
+                <ul class="list-unstyled list-check">
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>Velit explicabo vitae repellendu</li>
+                  <li>Repellat aliquam nihil illo</li>
+                </ul>
+    
+                <p><a href="#" class="btn-cta">Get in touch</a></p>
+              </div>
+            </div>
+          </div>
+        </section><!-- /About 3 Section -->
+
     <!-- Services Section -->
     <section id="services" class="services section">
       <!-- Section Title -->
@@ -397,85 +494,7 @@
       </div>
     </section><!-- /Services Section -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
 
-      <div class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <img src="assets/img/img_long_5.jpg" alt="Image " class="img-fluid img-overlap" data-aos="zoom-out">
-            </div>
-            <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="content-subtitle text-white opacity-50">Why Choose Us</h3>
-              <h2 class="content-title mb-4">
-                More than <strong>50 year experience</strong> in agriculture
-                industry
-              </h2>
-              <p class="opacity-50">
-                Reprehenderit, odio laboriosam? Blanditiis quae ullam quasi illum
-                minima nostrum perspiciatis error consequatur sit nulla.
-              </p>
-
-              <div class="row my-5">
-                <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-cloud-rain me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Plants needs rain</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-                <div class="col-lg-12 d-flex align-items-start mb-4">
-                  <i class="bi bi-heart me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Love organic foods</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-                <div class="col-lg-12 d-flex align-items-start">
-                  <i class="bi bi-shop me-4 display-6"></i>
-                  <div>
-                    <h4 class="m-0 h5 text-white">Sell vegies</h4>
-                    <p class="text-white opacity-50">Lorem ipsum dolor sit amet.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About Section -->
-
-    <!-- About 3 Section -->
-    <section id="about-3" class="about-3 section">
-
-      <div class="container">
-        <div class="row gy-4 justify-content-between align-items-center">
-          <div class="col-lg-6 order-lg-2 position-relative" data-aos="zoom-out">
-            <img src="assets/img/img_sq_1.jpg" alt="Image" class="img-fluid">
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </a>
-          </div>
-          <div class="col-lg-5 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="content-title mb-4">Plants Make Life Better</h2>
-            <p class="mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              necessitatibus placeat, atque qui voluptatem velit explicabo vitae
-              repellendus architecto provident nisi ullam minus asperiores commodi!
-              Tenetur, repellat aliquam nihil illo.
-            </p>
-            <ul class="list-unstyled list-check">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Velit explicabo vitae repellendu</li>
-              <li>Repellat aliquam nihil illo</li>
-            </ul>
-
-            <p><a href="#" class="btn-cta">Get in touch</a></p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /About 3 Section -->
 
     <!-- Services 2 Section -->
     <section id="services-2" class="services-2 section dark-background">
@@ -609,70 +628,37 @@
       </div>
     </section><!-- /Services 2 Section -->
 
-    <!-- Testimonials Section -->
     <section class="testimonials-12 testimonials section" id="testimonials">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>TESTIMONIALS</h2>
-        <p>Necessitatibus eius consequatur</p>
+        <h2>Our Partners</h2>
+        <p style="font-size: 16px;">수피아와 함께하는 자연을 지키는 파트너들입니다.</p>
       </div><!-- End Section Title -->
-
-      <div class="testimonial-wrap">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 mb-4 mb-md-4">
-              <div class="testimonial d-md-flex align-items-center">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="w-auto h-auto img-fluid rounded-0"
-                  alt="Testimonial author">
-                <div class="ms-4">
-                  <blockquote>
-                    <p>
-                      “Lorem ipsum dolor sit, amet consectetur adipisicing
-                      elit. Provident deleniti iusto molestias, dolore vel fugiat
-                      ab placeat ea?”
-                    </p>
-                  </blockquote>
-                  <p class="client-name">James Smith</p>
-                </div>
+    
+      <div class="carousel slide" id="logo-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo1.svg" alt="Logo 1" class="img-fluid">
+              </div>
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo2.svg" alt="Logo 2" class="img-fluid">
+              </div>
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo3.svg" alt="Logo 3" class="img-fluid">
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-2.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Kate Smith</p>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo4.svg" alt="Logo 4" class="img-fluid">
               </div>
-            </div>
-            <div class="col-md-4 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-3.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Claire Anderson</p>
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo5.svg" alt="Logo 5" class="img-fluid">
               </div>
-            </div>
-            <div class="col-md-4 mb-4 mb-md-4">
-              <div class="testimonial">
-                <img src="assets/img/testimonials/testimonials-4.jpg" alt="Testimonial author">
-                <blockquote>
-                  <p>
-                    “Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Provident deleniti iusto molestias, dolore vel fugiat
-                    ab placeat ea?”
-                  </p>
-                </blockquote>
-                <p class="client-name">Dan Smith</p>
+              <div class="col-4 text-center">
+                <img src="assets/img/logos/logo6.svg" alt="Logo 6" class="img-fluid">
               </div>
             </div>
           </div>
@@ -837,7 +823,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
-      <div class="mb-5">
+      <div class="col-lg-4 mb-5">
         <iframe style="width: 100%; height: 400px;"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
           frameborder="0" allowfullscreen=""></iframe>
@@ -845,66 +831,43 @@
 
       <div class="container" data-aos="fade">
 
-        <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-12">
 
           <div class="col-lg-4">
 
-            <div class="info">
-              <h3>Get in touch</h3>
-              <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+            <div class="info mb-5">
+              <h3>수피아(Supia inc.)</h3>
 
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Location.</h4>
+                  <h6>Seoul(HQ)</h6>
+                  <p class="mb-3">서울특별시 강남구 테헤란로 78길 14-10, 1F</p>
+                  <h6>Gwangmyeong(디자인Factory)</h6>
+                  <p>서울특별시 강남구 테헤란로 78길 14-10, 1F</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <h4>Email.</h4>
+                  <p>hello@supia.com</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="info-item d-flex">
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <h4>Call.</h4>
+                  <p>+82 02 1557 8848</p>
                 </div>
               </div><!-- End Info Item -->
 
             </div>
 
           </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" placeholder="Message" required=""></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
 
         </div>
 
@@ -986,14 +949,14 @@
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
-            © Copyright <strong><span>MyWebsite</span></strong>. All Rights Reserved
+            © 2024, Copyright <strong><span>Supia</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Supia inc. | 사업자등록번호 : 799-00-12345 | 대표자 : 김갑수 | Designed by <a href="https://bootstrapmade.com/">D_min</a>
           </div>
         </div>
 
@@ -1022,6 +985,9 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Video JS api -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

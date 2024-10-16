@@ -45,4 +45,24 @@ window.addEventListener("load", function () {
     (document.getElementById("overlay").style.display = "flex");
   document.getElementById("closeFormBtn").onclick = () =>
     (document.getElementById("overlay").style.display = "none");
+
+  const carousel = document.querySelector('#logo-carousel');
+
+  function nextSlide() {
+    const activeItem = carousel.querySelector('.carousel-item.active');
+    let nextItem = activeItem.nextElementSibling;
+  
+    if (!nextItem) {
+      nextItem = carousel.querySelector('.carousel-item:first-child');
+    }
+  
+    activeItem.classList.remove('active');
+    nextItem.classList.add('active');
+  }
+  
+  // 3초마다 다음 슬라이드로 이동
+  setInterval(nextSlide, 3000);
+
+
 });
+
