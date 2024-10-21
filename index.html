@@ -38,8 +38,9 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
-
+<body class="index-page custom-cursor">
+  <div class="circle-cursor circle-cursor-outer"></div>
+  <div class="circle-cursor circle-cursor-inner"></div>
   <header id="header" class="header d-flex align-items-center position-fixed w-100 bg-transparent">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <style>
@@ -120,8 +121,8 @@
     
       <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
     
-        <div class="carousel-item active">
-          <div class="cover_hero">
+        <div class="carousel-item active" >
+          <div class="cover_hero" style="height:0">
             <div class="video_hero" style="position: relative; overflow: hidden; height: 100vh; object-fit: cover;">
               <iframe
                 src="https://player.vimeo.com/video/1020036288?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&loop=1&muted=1&speed=0.6"
@@ -131,36 +132,52 @@
               </iframe>
             </div> <!--// video_hero-->
           </div>
-          <div class="carousel-container d-flex justify-content-evenly flex-xl-row " style="z-index: 5;">
-            <div class="col-lg-6">
-              <h2 class="d-flex justify-content-start">"One of a kind stories, reborn by Supia."</h2>
-              <p>"하나뿐인 이야기, 수피아에서 다시 피어나다"</p>
+          <div class="carousel-container justify-content-between align-items-stretch   container" style="z-index: 5;">
+            <div class="row my-auto align-items-center ">
+              <div class="col-xl-6">
+                <div class="">
+                  <h2 class="d-flex justify-content-start">"One of a kind stories, reborn by Supia."</h2>
+                  <p>"하나뿐인 이야기, 수피아에서 다시 피어나다"</p>
+                </div>
+              </div><!--// hero -->
+              <!-- form -->
+              <div class="form-container position-relative col-xl-6">
+                <div class="col-lg-9 ms-auto">
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">성함</label>
+                    <input type="text" class="form-control" id="name" placeholder="성함을 입력하세요" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">전화번호</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="전화번호를 입력하세요" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">이메일</label>
+                    <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">상담내용</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="간략한 상담내용을 입력하세요" required></textarea>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="privacyConsent" required>
+                    <label class="form-check-label" for="privacyConsent">개인정보 이용에 동의합니다.</label>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">상담하기</button>
+                  </div>
+                </form>
+              </div>
+              </div><!--// form-container-->
+
             </div>
-            <div class="form-container position-relative col-lg-3">
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">성함</label>
-                  <input type="text" class="form-control" id="name" placeholder="성함을 입력하세요">
-                </div>
-                <div class="mb-3">
-                  <label for="Phone" class="form-label">전화번호</label>
-                  <input type="tel" class="form-control" id="Phone" placeholder="전화번호를 입력하세요">
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">이메일</label>
-                  <input type="email" class="form-control" id="email" placeholder="이메일을 입력하세요">
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">상담내용</label>
-                  <textarea class="form-control" id="message" rows="3" placeholder="간략한 상담내용을 입력하세요"></textarea>
-                </div>
-                <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">상담하기</button>
-                </div>
-              </form>
-            </div><!--// form-container-->
-            <div class="line"></div>
-            <div class="scroll-down">Scroll Down <span class="arrow bounce">↓</span></div>
+            
+            <div class="position-relative d-flex flex-column justify-content-center align-items-center">
+              <div class="line"></div>
+              <div class="scroll-down d-flex align-items-center">Scroll Down <span class="arrow bounce">↓</span></div>
+            </div>
+            
           </div><!--// carousel-container-->
 
         </div><!--//Carousel Item -->
@@ -186,7 +203,7 @@
                 <div class="about_T col-lg-5" data-aos="fade-up" data-aos-delay="100">
                   <h3 class="content-subtitle text-white opacity-60 mb-4">About Us</h3>
                   <h2 class="content-title mb-3">
-                    <strong>수피아는 자연의 순수함과 시간의 가치를 상징하는 업사이클링 인테리어 브랜드입니다.</strong>
+                    <strong>수피아는 자연의 순수함과 시간의 가치를 담은 업사이클링 인테리어 브랜드입니다.</strong>
                   </h2>
                   <p class="opacity-70">
                     "당신의 소중한 기억을 재탄생시키고, 세상에 단 하나뿐인 가구와 시간의 이야기를 이어갑니다. 수피아와 함께 지속 가능한 가치를 만들어가세요."
@@ -643,33 +660,23 @@
         <p style="font-size: 16px;">수피아와 함께하는 자연을 지키는 파트너들입니다.</p>
       </div><!-- End Section Title -->
     
-      <div class="carousel slide" id="logo-carousel" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo1.svg" alt="Logo 1" class="img-fluid">
-              </div>
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo2.svg" alt="Logo 2" class="img-fluid">
-              </div>
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo3.svg" alt="Logo 3" class="img-fluid">
-              </div>
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo1.svg" alt="Logo 1" class="img-fluid">
-              </div>
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo2.svg" alt="Logo 2" class="img-fluid">
-              </div>
-              <div class="col-4 text-center">
-                <img src="assets/img/logos/logo3.svg" alt="Logo 3" class="img-fluid">
-              </div>
-            </div>
-          </div>
+<!-- partner_list -->
+<div class="partner_list">
+  <div class="partner_marquee" id="partner_marquee1">
+    <div>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="partner_marquee" id="partner_marquee2">
+    <div>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+<!-- //partner_list -->
 
-        </div>
-      </div>
     </section><!-- /Testimonials Section -->
 
     <!-- Recent Posts Section -->
@@ -819,7 +826,7 @@
     </section><!-- /Call To Action Section -->
 
     <!-- Contact Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
+    <div id="contact1"class="page-title dark-background" data-aos="fade"
       style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
         <h1>Contact</h1>
@@ -827,23 +834,19 @@
     </div><!-- End Page Title -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="col-lg-4 mb-5">
-        <iframe style="width: 100%; height: 400px;"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-          frameborder="0" allowfullscreen=""></iframe>
-      </div><!-- End Google Maps -->
-
+    <section id="contact" class="contact section mt-5">
       <div class="container" data-aos="fade">
-
-        <div class="col-lg-12">
-
-          <div class="col-lg-4">
-
-            <div class="info mb-5">
+        <div class="row mb-5 align-items-stretch">
+          <div class="col-lg-6 d-flex flex-column">
+            <div class="map-container flex-grow-1">
+              <div id="kakaoMap" style="width: 100%; height: 100%;"></div>
+            </div>
+          </div><!-- End Kakao Map -->
+    
+          <div class="col-lg-6 d-flex flex-column">
+            <div class="info mb-5 d-flex flex-column justify-content-between flex-grow-1">
               <h3>수피아(Supia inc.)</h3>
-
+    
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
@@ -851,10 +854,10 @@
                   <h6>Seoul(HQ)</h6>
                   <p class="mb-3">서울특별시 강남구 테헤란로 78길 14-10, 1F</p>
                   <h6>Gwangmyeong(디자인Factory)</h6>
-                  <p>서울특별시 강남구 테헤란로 78길 14-10, 1F</p>
+                  <p> 경기 광명시 광삼로 55-17, 1F</p>
                 </div>
               </div><!-- End Info Item -->
-
+    
               <div class="info-item d-flex">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
@@ -862,7 +865,7 @@
                   <p>hello@supia.com</p>
                 </div>
               </div><!-- End Info Item -->
-
+    
               <div class="info-item d-flex">
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
@@ -870,15 +873,10 @@
                   <p>+82 02 1557 8848</p>
                 </div>
               </div><!-- End Info Item -->
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section><!-- /Contact Section -->
 
 
@@ -970,7 +968,7 @@
           <a href=""><i class="bi bi-twitter-x"></i></a>
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href=""><i class="bi bi-behance"></i></a>
         </div>
 
       </div>
@@ -1001,6 +999,28 @@
   <!-- 유지보수 -->
   <script src="data/navi.js"></script>
   <script src="ndm/ndm.js"></script>
+
+  <!--카카오맵-->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=32462da25aef42b84ac439913eb376cf"></script>
+  <script>
+    var mapContainer = document.getElementById('kakaoMap'); // 지도를 표시할 div
+    var mapOption = {
+        center: new kakao.maps.LatLng(37.5665, 126.978), // 지도의 중심좌표 (위도, 경도)
+        level: 3 // 지도의 확대 레벨
+    };
+  
+    // 지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+  
+    // 마커를 생성합니다
+    var markerPosition = new kakao.maps.LatLng(37.5665, 126.978); // 마커의 위치 (위도, 경도)
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+  
+    // 마커를 지도에 표시합니다
+    marker.setMap(map);
+  </script>
 
 </body>
 

@@ -10,21 +10,12 @@
 
 /* custom class  */
 .scroll-down {
-  display: flex;
-  justify-content: center;
-  /* 수평 중앙 정렬 */
-  align-items: center;
-  /* 수직 중앙 정렬 */
-  margin-top: 20px;
+  margin: 16px 0;
   /* 위쪽 여백 */
   font-size: 1rem;
   /* 전체 텍스트 크기 */
   color: #fff;
   /* 텍스트 색상 */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .arrow {
@@ -62,33 +53,19 @@
 }
 
 .line {
-  display: flex;
-  justify-content: center;
-  /* 수평 중앙 정렬 */
-  align-items: center;
-  /* 수직 중앙 정렬 */
   width: 1px;
-  /* 라인의 두께 */
   height: 4rem;
-  /* 라인의 높이 */
   background-color: #fff;
-  /* 라인의 색상 */
-  margin: 10px 0;
-  /* 상하 여백 */
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  right: 50%;
 }
 
 /* 이미지 기본 스타일 */
 .zoom-container img {
   width: 100% !important;
-  max-width:80%;
+  max-width: 80%;
   /* 이미지가 컨테이너에 맞게 확장됨 */
   transition: transform 0.5s ease !important;
   /* 확대 효과를 부드럽게 처리 */
-  
+
 }
 
 /* 호버 시 이미지 확대 */
@@ -98,7 +75,375 @@
 }
 
 
-.about p{
+.about p {
   margin-bottom: 0;
 
+}
+
+/* contact us 카카오맵 */
+.map-container {
+  position: relative;
+  /* position 설정 */
+  overflow: hidden;
+  /* 오버플로우 숨기기 */
+  width: 100%;
+  /* 너비 100% 설정 */
+  min-height: 300px;
+  /* 최소 높이 설정 */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#kakaoMap {
+  width: 100%;
+  height: 100%;
+  /* 100% 높이로 설정 */
+}
+
+@media (max-width: 576px) {
+  .map-container {
+    min-height: 200px;
+    /* 작은 화면에서 최소 높이 조정 */
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 아이템 간의 공간 분배 */
+}
+
+/* .partner_list {
+  padding: 60px 0
+} */
+
+/* our partner */
+.partner_list .partner_marquee {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0
+}
+
+.partner_list .partner_marquee div {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  overflow: hidden
+}
+
+.partner_list .partner_marquee#partner_marquee1 div {
+  width: 7560px;
+  animation: partner_marquee1 45s linear infinite;
+  left: 0
+}
+
+.partner_list .partner_marquee#partner_marquee2 div {
+  width: 7560px;
+  animation: partner_marquee2 45s linear infinite;
+  right: 0
+}
+
+.partner_list .partner_marquee span {
+  height: 100%;
+  width: 270px;
+  height: 220px;
+  position: relative;
+  display: block
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 13) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_01_sk.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 12) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_02_po.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 11) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_03_hh.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 10) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_04_gs.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 9) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_05_lo.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 8) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_06_jw.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 7) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_07.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 6) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_08.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 5) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_09.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 4) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_10.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 3) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_11.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 2) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_12.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n - 1) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_13.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee1 div span:nth-of-type(14n) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_14.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 13) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_15.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 12) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_16.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 11) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_17.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 10) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_18.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 9) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_19.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 8) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_20.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 7) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_21.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 6) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_22.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 5) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_23.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 4) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_24.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 3) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_25.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 2) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_26.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n - 1) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_27.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+.partner_list .partner_marquee#partner_marquee2 div span:nth-of-type(14n) {
+  background: url("https://www.nexsmartmedia.co.kr/resources/img/main/logo_28.png") no-repeat 50% 50%;
+  background-size: auto 100%
+}
+
+@keyframes partner_marquee1 {
+  0% {
+    left: 0
+  }
+
+  100% {
+    left: -3780px
+  }
+}
+
+@keyframes partner_marquee2 {
+  0% {
+    right: 0
+  }
+
+  100% {
+    right: -3780px
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .partner_list {
+    padding: 0 0 10vw
+  }
+
+  .partner_list .partner_marquee {
+    height: 176px
+  }
+
+  .partner_list .partner_marquee #partner_marquee1 div {
+    width: 6048px;
+    animation: partner_marquee1 45s linear infinite;
+    left: 0
+  }
+
+  .partner_list .partner_marquee #partner_marquee2 div {
+    width: 6048px;
+    animation: partner_marquee2 45s linear infinite;
+    right: 0
+  }
+
+  .partner_list .partner_marquee #partner_marquee1 span,
+  .partner_list .partner_marquee #partner_marquee2 span {
+    width: 216px;
+    height: 176px
+  }
+
+  @keyframes partner_marquee1 {
+    0% {
+      left: 0
+    }
+
+    100% {
+      left: -3024px
+    }
+  }
+
+  @keyframes partner_marquee2 {
+    0% {
+      right: 0
+    }
+
+    100% {
+      right: -3024px
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .partner_list .partner_marquee {
+    height: 132px
+  }
+
+  .partner_list .partner_marquee#partner_marquee1 div {
+    width: 4536px;
+    animation: partner_marquee1 45s linear infinite;
+    left: 0
+  }
+
+  .partner_list .partner_marquee#partner_marquee2 div {
+    width: 4536px;
+    animation: partner_marquee2 45s linear infinite;
+    right: 0
+  }
+
+  .partner_list .partner_marquee#partner_marquee1 span,
+  .partner_list .partner_marquee#partner_marquee2 span {
+    width: 162px;
+    height: 132px
+  }
+
+  @keyframes partner_marquee1 {
+    0% {
+      left: 0
+    }
+
+    100% {
+      left: -2268px
+    }
+  }
+
+  @keyframes partner_marquee2 {
+    0% {
+      right: 0
+    }
+
+    100% {
+      right: -2268px
+    }
+  }
+}
+
+/*//our partner */
+
+/* Custom Cursor Styling */
+.circle-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Inner Circle Cursor */
+.circle-cursor-inner {
+  width: 6px;
+  height: 6px;
+  background-color: #1BB24B;
+  border-radius: 50%;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+}
+
+/* Outer Circle Cursor */
+.circle-cursor-outer {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #1BB24B;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.1s ease-out;
+}
+
+/* Hover Effects */
+.cursor-link-hover .circle-cursor-inner {
+  width: 20px;
+  height: 20px;
+  background-color: #1BB24B;
+  opacity: 0.5;
+}
+
+.cursor-link-hover .circle-cursor-outer {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(150, 144, 162, 0.75);
+  border: none;
 }

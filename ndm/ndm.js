@@ -1,4 +1,3 @@
-window.addEventListener("load", function () {
   const mynavi = this.document.querySelector("#navmenu ul"); // 배열형 데이터
 
   let mytag = "";
@@ -9,6 +8,28 @@ window.addEventListener("load", function () {
 
   mynavi.innerHTML = mytag;
 
+
+  const cursorOuter = document.querySelector(".circle-cursor-outer");
+  const cursorInner = document.querySelector(".circle-cursor-inner");
+  let mouseX = 0, mouseY = 0;
+
+  // Track mouse movement
+  document.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+      // Update cursor position with offset to center
+      function animateCursor() {
+      cursorOuter.style.left = `${mouseX - cursorOuter.offsetWidth / 2}px`;
+      cursorOuter.style.top = `${mouseY - cursorOuter.offsetHeight / 2}px`;
+
+      cursorInner.style.left = `${mouseX - cursorInner.offsetWidth / 2}px`;
+      cursorInner.style.top = `${mouseY - cursorInner.offsetHeight / 2}px`;
+      requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  
   // 스크롤 이벤트를 처리하는 함수를 정의
   function handleScroll() {
     var header = document.getElementById("header");
@@ -40,29 +61,20 @@ window.addEventListener("load", function () {
   window.addEventListener("scroll", function () {
     // requestAnimationFrame을 사용하여 성능 최적화
     requestAnimationFrame(handleScroll);
+  })
+
+  // Add hover effect for links
+  const links = document.querySelectorAll(".cursor-link");
+
+  links.forEach(link => {
+      link.addEventListener("mouseover", () => {
+          cursorInner.classList.add("cursor-link-hover");
+          cursorOuter.classList.add("cursor-link-hover");
+      });
+
+      link.addEventListener("mouseout", () => {
+          cursorInner.classList.remove("cursor-link-hover");
+          cursorOuter.classList.remove("cursor-link-hover");
+      });
   });
-  document.getElementById("toggleFormBtn").onclick = () =>
-    (document.getElementById("overlay").style.display = "flex");
-  document.getElementById("closeFormBtn").onclick = () =>
-    (document.getElementById("overlay").style.display = "none");
-
-  const carousel = document.querySelector('#logo-carousel');
-
-  function nextSlide() {
-    const activeItem = carousel.querySelector('.carousel-item.active');
-    let nextItem = activeItem.nextElementSibling;
-  
-    if (!nextItem) {
-      nextItem = carousel.querySelector('.carousel-item:first-child');
-    }
-  
-    activeItem.classList.remove('active');
-    nextItem.classList.add('active');
-  }
-  
-  // 3초마다 다음 슬라이드로 이동
-  setInterval(nextSlide, 3000);
-
-
-});
 

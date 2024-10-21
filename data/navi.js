@@ -22,7 +22,7 @@ const navidata = [
   },
   {
     d1text : "Contact us",
-    d1href : "#contact",
+    d1href : "#contact1",
     __target : ""
   }
 //배열(array) 안에 obj(객체) 들어갔는가?
