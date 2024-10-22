@@ -1,3 +1,54 @@
+/* Fonts */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+:root {
+  --default-font: "pretendard",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Marcellus",  sans-serif;
+  --nav-font: "Marcellus",  sans-serif;
+  --kr-font: "pretendard",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1BB24B; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #212529;  /* The default color of the main navmenu links */
+  --nav-hover-color: #1BB24B !important; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #1BB24B; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --accent-color: #1BB24B;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
 #header>div {
   gap: 100px;
 }
@@ -446,4 +497,136 @@
   height: 4rem;
   background-color: rgba(150, 144, 162, 0.75);
   border: none;
+}
+
+
+/*-------------------------------------------------------*/
+/* Counters
+/*-------------------------------------------------------*/
+
+#counting-animation {
+  font-family: var(--kr-font);
+}
+
+.counters.bg-parallax .statistic-timer,
+.counters.bg-parallax .counter-text,
+.counters.bg-color .statistic-timer,
+.counters.bg-color .counter-text {
+  color: #fff;
+}
+
+.counters.bg-parallax .statistic-timer:after,
+.counters.bg-color .statistic-timer:after {
+  border-color: #fff;
+}
+
+.statistic-border-right {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.statistic-timer {
+  color: #a7a7a7;
+  font-size: 3rem;
+  font-family: var(--kr-font);
+  font-weight: 400;
+  line-height: 1.2;
+  transition: 0.5s;
+}
+
+.statistic-timer.text-active {
+  font-size: 3rem;
+  color: var(--accent-color);
+  font-family: var(--kr-font);
+  font-weight: 900;
+}
+
+.statistic-timer:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 1px solid #a3a3a3;
+  margin: 15px auto 23px;
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .statistic-timer {
+    font-size: 32px !important;
+  }
+}
+
+
+
+.statistic-1 {
+  padding: 20px 0;
+}
+
+.statistic-1.last {
+  border-right: 0;
+}
+
+.statistic-1 .statistic-timer {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.statistic-1 .statistic-timer:after {
+  display: none;
+}
+
+.statistic-1 .counter-text {
+  font-size: 5rem;
+  font-family: var(--kr-font);
+  margin-bottom: 5px;
+}
+
+.counter-text {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+  font-family: var(--kr-font);
+}
+
+.statistic.with-icon .statistic-timer {
+  display: block;
+  margin: 20px 0;
+}
+
+/*-------------------------------------------------------*/
+/* hero-logo-draw
+/*-------------------------------------------------------*/
+
+/* SVG 크기 설정 */
+#hero-logo {
+  width: 30%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* 경로 그려지는 동안 선만 보이게 설정 */
+#hero-logo path {
+  stroke: white;
+  /* 선 색상: 흰색 */
+  stroke-width: 2;
+  /* 선 두께 */
+  fill: transparent;
+  /* 채우기 없음 */
+  stroke-dasharray: 1000;
+  /* 경로 길이를 설정 */
+  stroke-dashoffset: 1000;
+  /* 경로를 숨긴 상태로 시작 */
+  animation: draw 1.5s ease forwards;
+  /* 1.5초 동안 그려지는 애니메이션 */
+  transition: fill 1s ease;
+  /* 채워지는 색상이 부드럽게 전환되도록 설정 */
+}
+
+/* 그려지는 애니메이션 */
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    /* 경로가 완전히 그려짐 */
+  }
 }
