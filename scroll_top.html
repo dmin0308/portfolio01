@@ -19,47 +19,52 @@
             height: 200vh;
         }
 
-        .social-bar {
+        .quick {
             transition: all cubic-bezier(0.645, 0.045, 0.355, 1) 0.35s;
         }
 
-        .social-bar-holder {
+        .quick-holder {
             white-space: nowrap;
             display: inline-flex;
             align-items: center;
         }
 
-        .social-bar-holder li {
+        .quick-holder li {
             margin: 0px 5px;
         }
 
-        .social-bar-holder li a::after {
+        .quick-holder li a::after {
             content: "/";
             display: inline;
             padding-left: 10px;
         }
 
-        .social-bar-holder li:last-child a::after {
+        .quick-holder li:last-child a::after {
             display: none;
         }
 
-        .social-bar-holder.icons li {
+        .quick-holder.icons li {
             padding: 0px 5px;
         }
 
-        .social-bar-holder.icons li i::before {
+        /* 아이콘에 ::before 사용 */
+        .quick-holder.icons li i::before {
             transform: rotate(90deg);
         }
 
-        .social-bar-holder.icons li i::hover{
-            
-        }        
+        .quick-holder.icons li i {
+            transition: color 0.3s ease;
+        }
 
-        .social-bar-holder.icons li a::after {
+        .quick-holder.icons li a:hover i {
+            color: #0094FF; /* 호버 시 아이콘 색상 파란색으로 변경 */
+        }
+
+        .quick-holder.icons li a::after {
             display: none;
         }
 
-        .social-bar,
+        .quick,
         .scroll-top {
             margin-right: 1.5rem;
             font-weight: 600;
@@ -123,7 +128,7 @@
             top: 0;
             right: 0;
             height: 100%;
-            background-color: #000;
+            background-color: #0094FF;
             width: 0;
             transition: width 0.35s ease;
         }
@@ -152,8 +157,8 @@
 
     <ul class="elements-bar right">
         <li>
-            <div class="social-bar">
-                <ul class="social-bar-holder icons">
+            <div class="quick">
+                <ul class="quick-holder icons">
                     <li>Quick</li>
                     <li>—</li>
                     <li>
