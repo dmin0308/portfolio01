@@ -1,0 +1,26 @@
+# 모든 검색 엔진 크롤러에 대한 규칙 설정
+User-agent: *
+
+# 관리자 페이지 차단
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /dashboard/
+
+# 개인 정보 관련 페이지 차단
+Disallow: /user-profile/
+Disallow: /settings/
+
+# 중복 페이지 또는 검색 결과 페이지 차단
+Disallow: /search/
+Disallow: /tag/
+Disallow: /category/page/
+
+# 특정 파일 형식 차단
+Disallow: /*.pdf$
+
+# 이미지 폴더는 허용 (원하는 경우 이미지 검색 허용)
+Allow: /images/
+
+# 사이트맵 위치 지정 (사이트맵 URL을 명시하여 크롤러에 제공)
+Sitemap: https://i-web.kr/green09/sitemap.xml
